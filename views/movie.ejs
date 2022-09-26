@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    
+  </head>
+  <body>
+    <div class="container">
+
+      <div>
+        <h1 class="has-text-danger" style="text-align: center; font-size:50px;"><%= title %></h1>
+      </div>
+
+      <div class="is-flex is-justify-content-center mt-4">
+        <img src="<%= data.Poster %>" alt="" style="width: 300px; height: 400px;">
+      </div>
+
+      <div class="is-flex is-justify-content-center mt-4">
+        <table class="table is-bordered">
+          <tr class="has-background-danger">
+            <th><%= Object.keys(data)[18] %></th>
+            <th><%= Object.keys(data)[0] %></th>
+            <th><%= Object.keys(data)[1] %></th>
+            <th><%= Object.keys(data)[5] %></th>
+            <th><%= Object.keys(data)[6] %></th>
+            <th><%= Object.keys(data)[7] %></th>
+            <th><%= Object.keys(data)[11] %></th>
+          </tr>
+          <tr class="has-background-primary">
+            <th><%= data.Type %></th>
+            <th><%= data.Title %></th>
+            <th><%= data.Year %></th>
+            <th><%= data.Genre %></th>
+            <th><%= data.Director %></th>
+            <th><%= data.Writer %></th>
+            <th><%= data.Country %></th>
+          </tr>
+        </table>
+      </div>
+
+      <div class="is-flex is-justify-content-center mt-4">
+        <table class="table is-bordered">
+          <tr class="has-background-danger">
+            <th style="text-align: center;"><%= Object.keys(data)[8] %></th>
+          </tr>
+          <tr class="has-background-primary">
+            <th><%= data.Actors %></th>
+          </tr>
+        </table>
+      </div>
+      <div class="is-flex is-justify-content-center mt-4">
+        <a href="/"><button class="button has-background-danger">Back to Movies</button></a>
+      </div>
+    </div>
+    
+  </body>
+
+</html>
